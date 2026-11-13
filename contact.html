@@ -6,6 +6,24 @@
   <title>Contact Us & Request RFP | Krishna Enterprises - Thermal Power Plant O&M</title>
   <meta name="description" content="Contact Krishna Enterprises for tenders, power plant O&M RFPs, turbine overhaul quotes, or emergency 24/7 shutdown mobilization. Headquarters in Muzaffarnagar, UP.">
   
+  <!-- Clear any legacy Service Workers & PWA caches from older ERP deployments -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+    if ('caches' in window) {
+      caches.keys().then(function(names) {
+        for (let name of names) {
+          caches.delete(name);
+        }
+      });
+    }
+  </script>
+  
   <link rel="icon" type="image/png" href="https://trivinetratech.co.in/live_dev/krishnaenterprises/wp-content/uploads/2026/08/logo.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">

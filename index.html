@@ -6,6 +6,24 @@
   <title>Krishna Enterprises | Thermal Power Plant O&M, Turbine Overhauling & Commissioning (up to 200 MW)</title>
   <meta name="description" content="Leading Operation & Maintenance (O&M) service provider for thermal power plants, boilers, steam/gas turbines, FGD systems, and grain distilleries across India. 18+ years, 145+ projects.">
   
+  <!-- Clear any legacy Service Workers & PWA caches from older ERP deployments -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+    if ('caches' in window) {
+      caches.keys().then(function(names) {
+        for (let name of names) {
+          caches.delete(name);
+        }
+      });
+    }
+  </script>
+  
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://trivinetratech.co.in/live_dev/krishnaenterprises/wp-content/uploads/2026/08/logo.png">
   

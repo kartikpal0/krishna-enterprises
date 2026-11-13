@@ -6,6 +6,24 @@
   <title>Our Services | Krishna Enterprises - Power Plant O&M & Overhauling</title>
   <meta name="description" content="Explore our 9 core engineering services: Turnkey O&M, Steam & Gas Turbine Overhauls, Ash & Coal Handling, FGD Systems, Grain Distilleries, and EPC Commissioning up to 200 MW.">
   
+  <!-- Clear any legacy Service Workers & PWA caches from older ERP deployments -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+    if ('caches' in window) {
+      caches.keys().then(function(names) {
+        for (let name of names) {
+          caches.delete(name);
+        }
+      });
+    }
+  </script>
+  
   <link rel="icon" type="image/png" href="https://trivinetratech.co.in/live_dev/krishnaenterprises/wp-content/uploads/2026/08/logo.png">
   
   <!-- Google Fonts -->

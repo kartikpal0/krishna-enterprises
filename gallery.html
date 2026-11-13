@@ -6,6 +6,24 @@
   <title>Plant Project Gallery | Krishna Enterprises - Field Works & Overhauls</title>
   <meta name="description" content="Visual portfolio of Krishna Enterprises: High-pressure boiler erections, turbine dynamic balancing, FGD systems, and heavy mechanical overhauls up to 200 MW.">
   
+  <!-- Clear any legacy Service Workers & PWA caches from older ERP deployments -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+    if ('caches' in window) {
+      caches.keys().then(function(names) {
+        for (let name of names) {
+          caches.delete(name);
+        }
+      });
+    }
+  </script>
+  
   <link rel="icon" type="image/png" href="https://trivinetratech.co.in/live_dev/krishnaenterprises/wp-content/uploads/2026/08/logo.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">

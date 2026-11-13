@@ -6,6 +6,24 @@
   <title>About Us | Krishna Enterprises - 18+ Years in Thermal Power Plant O&M</title>
   <meta name="description" content="Discover Krishna Enterprises: Over 18 years of specialized engineering in thermal power plant operation, boiler overhauls, turbine maintenance, and commissioning across India.">
   
+  <!-- Clear any legacy Service Workers & PWA caches from older ERP deployments -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+    if ('caches' in window) {
+      caches.keys().then(function(names) {
+        for (let name of names) {
+          caches.delete(name);
+        }
+      });
+    }
+  </script>
+  
   <link rel="icon" type="image/png" href="https://trivinetratech.co.in/live_dev/krishnaenterprises/wp-content/uploads/2026/08/logo.png">
   
   <!-- Google Fonts: Manrope, Titillium Web, Roboto -->
